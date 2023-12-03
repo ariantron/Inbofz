@@ -40,6 +40,11 @@ const dict = {
         fa: "دانلود",
         en: "Download",
         rus: "Скачать"
+    },
+    catalog_download:{
+        fa: "دانلود کاتالوگ‌ها",
+        en: "Download catalogs",
+        rus: "Скачать каталоги"
     }
 }
 
@@ -51,6 +56,7 @@ function changeLang(lang) {
                 elements.item(i).innerHTML = dict[key][lang]
                 if (lang === 'fa') {
                     elements.item(i).style.direction = 'rtl'
+                    document.getElementsByClassName('modal-body').item(0).style.direction = 'rtl'
                     document.getElementById('btn-110').onclick=()=>{
                         window.location.href='files/farsi.pdf'
                     }
@@ -59,6 +65,7 @@ function changeLang(lang) {
                     }
                 } else {
                     elements.item(i).style.direction = 'ltr'
+                    document.getElementsByClassName('modal-body').item(0).style.direction = 'ltr'
                     if (lang==='en'){
                         document.getElementById('btn-110').onclick=()=>{
                             window.location.href='files/en.pdf'
