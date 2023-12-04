@@ -26,14 +26,14 @@ const dict = {
         rus: "Представление и возможности свободной зоны Инчебан"
     },
     footer: {
-        fa: "تمامی حقوق این وب سایت متعلق به سازمان منطقه آزاد تجاری-صنعتی اینچه‌برون می‌باشد."+
-            "<br>"+
+        fa: "تمامی حقوق این وب سایت متعلق به سازمان منطقه آزاد تجاری-صنعتی اینچه‌برون می‌باشد." +
+            "<br>" +
             "شماره تماس: ۳۲۵۳۵۶۱۰-۰۱۷",
-        en: "All the rights of this website belong to Inchebarun Free Trade Zone Organization."+
-            "<br>"+
+        en: "All the rights of this website belong to Inchebarun Free Trade Zone Organization." +
+            "<br>" +
             "Phone Number: +98 17 325 35 610",
-        rus: "Все права на этот сайт принадлежат Организации свободной экономической зоны Инчебарун."+
-            "<br>"+
+        rus: "Все права на этот сайт принадлежат Организации свободной экономической зоны Инчебарун." +
+            "<br>" +
             "Номер телефона: +98 17 325 35 610"
     },
     download: {
@@ -41,7 +41,7 @@ const dict = {
         en: "Download",
         rus: "Скачать"
     },
-    catalog_download:{
+    catalog_download: {
         fa: "دانلود کاتالوگ‌ها",
         en: "Download catalogs",
         rus: "Скачать каталоги"
@@ -57,29 +57,28 @@ function changeLang(lang) {
                 if (lang === 'fa') {
                     elements.item(i).style.direction = 'rtl'
                     document.getElementsByClassName('modal-body').item(0).style.direction = 'rtl'
-                    document.getElementById('btn-110').onclick=()=>{
-                        window.location.href='files/farsi.pdf'
+                    document.getElementById('btn-110').onclick = () => {
+                        window.location.href = 'files/fa.pdf'
                     }
-                    document.getElementById('btn-opt').onclick=()=>{
-                        window.location.href='files/fa.pdf'
+                    document.getElementById('btn-opt').onclick = () => {
+                        window.location.href = 'files/farsi.pdf'
                     }
                 } else {
                     elements.item(i).style.direction = 'ltr'
                     document.getElementsByClassName('modal-body').item(0).style.direction = 'ltr'
-                    if (lang==='en'){
-                        document.getElementById('btn-110').onclick=()=>{
-                            window.location.href='files/en.pdf'
+                    if (lang === 'en') {
+                        document.getElementById('btn-110').onclick = () => {
+                            window.location.href = 'files/en.pdf'
                         }
-                        document.getElementById('btn-opt').onclick=()=>{
-                            window.location.href='files/latin.pdf'
+                        document.getElementById('btn-opt').onclick = () => {
+                            window.location.href = 'files/latin.pdf'
                         }
-                    }
-                    else {
-                        document.getElementById('btn-110').onclick=()=>{
-                            window.location.href=''
+                    } else {
+                        document.getElementById('btn-110').onclick = () => {
+                            window.location.href = 'files/fa.pdf'
                         }
-                        document.getElementById('btn-opt').onclick=()=>{
-                            window.location.href='files/russian.pdf'
+                        document.getElementById('btn-opt').onclick = () => {
+                            window.location.href = 'files/russian.pdf'
                         }
                     }
                 }
